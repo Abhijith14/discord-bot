@@ -1,0 +1,23 @@
+{
+    "name": "BUDDYAI",
+    "description": "An easy to install bot for Discord - DM to contact mods!",
+    "repository": "https://github.com/Abhijith14/Discord-Bot",
+    "env": {
+        "TOKEN": {
+            "description": "Your discord bot's token.",
+            "required": true
+        },
+        "AUDIOCHANNEL_ID": {
+            "description": "The id of audio channel bot can talk to.",
+            "required": true
+        },
+        "GUILD_ID": {
+            "description": "The id for the server you are hosting this bot for.",
+            "required": true
+        },
+        "GITHUB_TOKEN": {
+            "description": "A github personal access token with the repo scope.",
+            "required": false
+        }
+    }
+}
