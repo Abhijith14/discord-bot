@@ -11,51 +11,39 @@
 
   <br>
   
-  <a href="https://heroku.com/deploy?template=https://github.com/kyb3r/modmail">
+  <a href="https://heroku.com/deploy?template=https://github.com/Abhijith14/discord-bot">
     <img src="https://img.shields.io/badge/deploy_to-heroku-997FBC.svg?style=for-the-badge&logo=Heroku">
   </a>
-  <a href="https://github.com/kyb3r/modmail/">
-    <img src="https://api.modmail.dev/badges/instances.svg" alt="Bot instances">
+    <a href="#">
+    <img src="https://img.shields.io/discord/716557689144082443.svg?label=Discord&logo=Discord&colorB=7289da&style=for-the-badge" alt="Support">
   </a>
-
-  <a href="https://discord.gg/j5e9p8w">
-    <img src="https://img.shields.io/discord/515071617815019520.svg?label=Discord&logo=Discord&colorB=7289da&style=for-the-badge" alt="Support">
-  </a>
-
-  <a href="https://patreon.com/kyber">
-    <img src="https://img.shields.io/badge/patreon-donate-orange.svg?style=for-the-badge&logo=Patreon" alt="Python 3.7">
-  </a>
-
   <a href="https://www.python.org/downloads/">
     <img src="https://img.shields.io/badge/Made%20With-Python%203.7-blue.svg?style=for-the-badge&logo=Python" alt="Made with Python 3.7">
   </a>
-
-  <a href="https://github.com/ambv/black">
-    <img src="https://img.shields.io/badge/Code%20Style-Black-black?style=for-the-badge">
+  <a href="https://www.jetbrains.com/pycharm/">
+    <img src="https://img.shields.io/badge/PyCharm-IDE-black?style=for-the-badge&logo=PyCharm">
   </a>
-
-  <a href="https://github.com/kyb3r/modmail/blob/master/LICENSE">
+  <!-- <a href="https://github.com/kyb3r/modmail/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-agpl-e74c3c.svg?style=for-the-badge" alt="MIT License">
-  </a>
+  </a> -->
 
 <br>
-<img src='https://i.imgur.com/fru5Q07.png' align='center' width=500>
+<br>
+<img src='readme_assets/BUDDY AI.png' align='center' width=300>
 </div>
 
 
-## What is Modmail?
+## What is BUDDY AI?
 
-Modmail is similar to Reddit's Modmail, both in functionality and purpose. It serves as a shared inbox for server staff to communicate with their users in a seamless way.
+BUDDY is an AI powered Chatbot integrated as a Discord Bot. Buddy AI is the result of my search for a perfect solution for all the computer related problems I faced which then provoked me to think of why not helping all of you then.
 
-This bot is free for everyone and always will be. If you like this project and would like to show your appreciation, you can support us on **[Patreon](https://www.patreon.com/kyber)**, cool benefits included! 
+This bot is free for everyone and always will be. If you like this project please follow my [GitHub](https://www.github.com/Abhijith14) and star this [repo](https://github.com/Abhijith14/discord-bot).
 
 ## How does it work?
 
-When a member sends a direct message to the bot, Modmail will create a channel or "thread" into a designated category. All further DM messages will automatically relay to that channel; any available staff can respond within the channel.
+When a member sends a direct message to the bot, the bot responds and learns from the interactions made to the bot.
 
-Our Logviewer will save the threads so you can view previous threads through their corresponding log link. Here is an [**example**](https://logs.modmail.dev/example).
-
-## Features
+## Commands
 
 * **Highly Customisable:**
   * Bot activity, prefix, category, log channel, etc.
@@ -83,114 +71,46 @@ This list is ever-growing thanks to active development and our exceptional contr
 
 ## Installation
 
-Where can I find the Modmail bot invite link? 
-
-Unfortunately, due to how this bot functions, it cannot be invited. The lack of an invite link is to ensure an individuality to your server and grant you full control over your bot and data. Nonetheless, you can quickly obtain a free copy of Modmail for your server by following one of the methods listed below (roughly takes 15 minutes of your time).
+To install this bot directly into your server, Click [here](https://discord.com/oauth2/authorize?client_id=717691435905843331&scope=bot&permissions=0) or visit [https://discord.com/oauth2/authorize?client_id=717691435905843331&scope=bot&permissions=0](https://discord.com/oauth2/authorize?client_id=717691435905843331&scope=bot&permissions=0)
 
 ### Heroku
 
 You can host this bot on Heroku.
 
 Installation via Heroku is possible with your web browser alone. 
-The [**installation guide**](https://github.com/kyb3r/modmail/wiki/Installation) (which includes a video tutorial!) will guide you through the entire installation process. If you run into any problems, join our [Modmail Discord Server](https://discord.gg/etJNHCQ) for help and support.
+The [**installation guide**](https://github.com/Abhijith14/discord-bot/wiki/Installation) (which includes video tutorial!) will guide you through the entire installation process.
 
 To configure automatic updates:
  - Login to [GitHub](https://github.com/) and verify your account.
- - [Fork the repo](https://github.com/kyb3r/modmail/fork).
+ - [Fork the repo](https://github.com/Abhijith14/discord-bot/fork).
  - Install the [Pull app](https://github.com/apps/pull) for your fork. 
- - Then go to the Deploy tab in your [Heroku account](https://dashboard.heroku.com/apps) of your bot app, select GitHub and connect your fork (usually by typing "Modmail"). 
+ - Then go to the Deploy tab in your [Heroku account](https://dashboard.heroku.com/apps) of your bot app, select GitHub and connect your fork (usually by typing "BUDDYAI"). 
  - Turn on auto-deploy for the `master` branch.
 
-### Hosting for Patreons
-
-If you don't want to go through the trouble of setting up your very own Modmail bot or wish to support this project, we got a solution for you! We offer the complete installation, hosting, and maintenance of your Modmail with [**Patreon**](https://patreon.com/kyber). Join our [Modmail Discord Server](https://discord.gg/etJNHCQ) for more info! 
 
 ### Locally
 
-Local hosting of Modmail is also possible. First, you will need [`Python 3.7`](https://www.python.org/downloads/release/python-376/).
+Local hosting of BUDDY AI is also possible. First, you will need [`Python 3.7`](https://www.python.org/downloads/release/python-376/).
 
-Follow the [**installation guide**](https://github.com/kyb3r/modmail/wiki/Installation) and disregard deploying the Heroku bot application. If you run into any problems, join our [Modmail Discord Server](https://discord.gg/etJNHCQ) for help and support.
+Follow the [**installation guide**](https://github.com/Abhijith14/discord-bot/wiki/Installationn) and disregard deploying the Heroku bot application.
 
 Clone the repo:
 
 ```console
-$ git clone https://github.com/kyb3r/modmail
-$ cd modmail
+$ git clone https://github.com/Abhijith14/discord-bot.git
+$ cd discord-bot
 ```
 
 Install dependencies:
 
 ```console
-$ pipenv install
+$ pip install -r requirements.txt
 ```
 
-Rename the `.env.example` to `.env` and fill out the fields. If `.env.example` is nonexistent (hidden), create a text file named `.env` and copy the contents of [`.env.example`](https://raw.githubusercontent.com/kyb3r/modmail/master/.env.example) then modify the values.
+Fill out the fields in  [`app.json`](https://github.com/Abhijith14/discord-bot/blob/master/app.json) then modify the values.
 
 Finally, start Modmail.
 
 ```console
-$ pipenv run bot
+$ python BUDDYAIBOT.py
 ```
-
-#### Docker
-
-This repo supplies a Dockerfile for simplified deployment. 
-
-You can build your own Docker image:
-
-```console
-$ docker build . --tag=modmail
-```
-
-Or run directly from a pre-built version from https://hub.docker.com/.
-
-- Kyber's:
-
-```console
-$ docker pull kyb3rr/modmail
-```
-
-And to run your docker image:
-
-```console
-$ docker run --env-file .env kyb3rr/modmail
-```
-- `.env` should be the path to your env file; you can also supply a path: `/path/to/.env`.
-
-## Sponsors
-
-Special thanks to our sponsors for supporting the project.
-
-<a href='https://www.youtube.com/channel/UCgSmBJD9imASmJRleycTCwQ/featured'>
-  <img height=150 src='https://i.imgur.com/WyzaPKY.png' style='margin:10px'>
-</a>
-
-<a href='https://discord.gg/BanCwptMJV'>
-  <img height=150 src='https://i.imgur.com/cs2QEcp.png' style='margin:10px'>
-</a>
-
-
-Become a sponsor on [Patreon](https://patreon.com/kyber).
-
-## Plugins
-
-Modmail supports the use of third-party plugins to extend or add functionalities to the bot.
-Plugins allow niche features as well as anything else outside of the scope of the core functionality of Modmail. 
-
-You can find a list of third-party plugins using the `?plugins registry`  command or visit the [Unofficial List of Plugins](https://github.com/kyb3r/modmail/wiki/Unofficial-List-of-Plugins) for a list of plugins contributed by the community.
-
-To develop your own, check out the [plugins documentation](https://github.com/kyb3r/modmail/wiki/Plugins).
-
-Plugins requests and support are available in our [Modmail Support Server](https://discord.gg/j5e9p8w).
-
-## Contributing
-
-Contributions to Modmail are always welcome, whether it be improvements to the documentation or new functionality, please feel free to make the change. Check out our [contributing guidelines](https://github.com/kyb3r/modmail/blob/master/.github/CONTRIBUTING.md) before you get started.
-
-If you like this project and would like to show your appreciation, support us on **[Patreon](https://www.patreon.com/kyber)**!
-
-## Beta Testing
-
-Our [development](https://github.com/kyb3r/modmail/tree/development) branch is where most of our features are tested before public release. Be warned that there could be bugs in various commands so keep it away from any large servers you manage.
-
-If you wish to test the new features and play around with them, feel free to join our [Public Test Server](https://discord.gg/v5hTjKC). Bugs can be raised within that server or in our Github issues (state that you are using the development branch though).
