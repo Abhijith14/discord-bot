@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="readme_assets/logo.gif" align="center" width=700>
+  <img src="https://raw.githubusercontent.com/Abhijith14/discord-bot/master/readme_assets/logo.gif" align="center" width=700>
   <br>
   <strong><i>A feature-rich bot for Discord.</i></strong>
   <br>
@@ -29,7 +29,7 @@
 
 <br>
 <br>
-<img src='readme_assets/BUDDY AI.png' align='center' width=300>
+<img src='https://raw.githubusercontent.com/Abhijith14/discord-bot/master/readme_assets/BUDDY%20AI.png' align='center' width=300>
 </div>
 
 
@@ -45,29 +45,7 @@ When a member sends a direct message to the bot, the bot responds and learns fro
 
 ## Commands
 
-* **Highly Customisable:**
-  * Bot activity, prefix, category, log channel, etc.
-  * Command permission system.
-  * Interface elements (color, responses, reactions, etc.).
-  * Snippets and *command aliases*.
-  * Minimum duration for accounts to be created before allowed to contact Modmail (`account_age`).
-  * Minimum length for members to be in the guild before allowed to contact Modmail (`guild_age`). 
-
-* **Advanced Logging Functionality:**
-  * When you close a thread, Modmail will generate a [log link](https://logs.modmail.dev/example) and post it to your log channel.
-  * Native Discord dark-mode feel.
-  * Markdown/formatting support.
-  * Login via Discord to protect your logs ([premium Patreon feature](https://patreon.com/kyber)).
-  * See past logs of a user with `?logs`.
-  * Searchable by text queries using `?logs search`.
-
-* **Robust implementation:**
-  * Schedule tasks in human time, e.g. `?close in 2 hours silently`.
-  * Editing and deleting messages are synced.
-  * Support for the diverse range of message contents (multiple images, files).
-  * Paginated commands interfaces via reactions.
-
-This list is ever-growing thanks to active development and our exceptional contributors. See a full list of documented commands by using the `?help` command.
+See a full list of documented commands by using the `@BUDDYAI ?help` command.
 
 ## Installation
 
