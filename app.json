@@ -23,13 +23,13 @@
             "required": true
         },
         "Channels_Valid": {
-            "description": "A list of text-channels used for the bot to interact.",
+            "description": "A list of comma-separated text-channels used for the bot to interact. ('general' recommended)",
             "value": ["general"],
             "required": true
         },
         "TIMEZONE": {
             "description": "Your Timezone for python pytz package.",
-            "values": "Asia/Kolkata",
+            "value": "Asia/Kolkata",
             "required": true
         },
         "GUILD_ID": {
