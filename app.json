@@ -35,7 +35,7 @@
         "GUILD_ID": {
             "description": "The id for the server you are hosting this bot for.",
             "value": "",
-            "required": false
+            "required": true
         },
         "GITHUB_TOKEN": {
             "description": "A github personal access token with the repo scope.",

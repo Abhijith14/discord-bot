@@ -11,25 +11,26 @@ import json
 import os
 
 data = "Sorry"
-keywords_basic = {"what'syourname": "```Hi, My name is BUDDY. Its nice to meet you. What can i do for you ?```",
-                          "howareyou": "```Great.. Thanks for asking. How may I help ?```",
-                          "whatisyourname": "```Hi, My name is BUDDY. Its nice to meet you. What can i do for you ?```",
-                          "whatareyoudoing": "```I am helping you. Ask me, if anything comes by...```",
-                          "heybuddy": "```Hello. How are you ?```",
-                          "hibuddy": "```Hello. How are you ?```",
-                          "hellobuddy": "```Hi. how are you ?```",
-                          "iamfine": "```Great! How can i help ?```",
-                          "good": "```You are welcome..```",
-                          "hello": "```Hi. How are you ?```",
-                          "hola": "```Hi. How are you ?```",
-                          "hi": "```Hello, How are you ?```",
-                          "hey": "```Hello, How are you ?```"}
+keywords_basic = {"what'syourname": "Hi, My name is BUDDY. Its nice to meet you. What can i do for you ?",
+                          "howareyou": "Great.. Thanks for asking. How may I help ?",
+                          "whatisyourname": "Hi, My name is BUDDY. Its nice to meet you. What can i do for you ?",
+                          "whatareyoudoing": "I am helping you. Ask me, if anything comes by...",
+                          "heybuddy": "Hello. How are you ?",
+                          "hibuddy": "Hello. How are you ?",
+                          "hellobuddy": "Hi. how are you ?",
+                          "iamfine": "Great! How can i help ?",
+                          "good": "You are welcome..",
+                          "hello": "Hi. How are you ?",
+                          "hola": "Hi. How are you ?",
+                          "hi": "Hello, How are you ?",
+                          "hey": "Hello, How are you ?"}
 
 keywords_wish = ["goodmorning", "goodafternoon", "goodevening", "goodnight"]
 
 keywords_date = ["today", "date", "whatisthedate", "whatistoday", "whatisthemonth", "whatistheday", "whatistheyear", "month", "year"]
 
 keywords_clock = ["whatisthetime", "time", "what'sthetime"]
+
 
 def read_token():
     with open('app.json') as f:
@@ -51,15 +52,18 @@ def read_ChannelList():
         appData = json.load(f)
     return appData['env']['Channels_Valid']['value']
 
+def read_GuildId():
+    with open('app.json') as f:
+        appData = json.load(f)
+    return appData['env']['GUILD_ID']['value']
+
+
 def read_TimeZone():
     with open('app.json') as f:
         appData = json.load(f)
     return appData['env']['TIMEZONE']['value']
 
-
-
-tz = pytz.timezone(read_TimeZone)
-
+tz = pytz.timezone(read_TimeZone())
 
 token = read_token()
 
@@ -69,7 +73,6 @@ client = commands.Bot(command_prefix="")
 
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-
 
 global channel_audio
 
@@ -297,7 +300,7 @@ async def google_search(ctx):
     await ctx.send("```You Have Results from :```")
     ans = get_search(data[7:])
     for i in ans:
-        await ctx.send("```" + str(i) + "```")
+        await ctx.send(i)
 
 @client.command(pass_context=True, aliases=["define"])
 async def wiki_search(ctx):
@@ -315,14 +318,14 @@ async def wiki_search(ctx):
                 s = s + 1
                 indexC = j
 
-        await ctx.send("```" + str(wikipedia.summary(data)[:indexC + 1]) + "```")
+        await ctx.send("```" + wikipedia.summary(data)[:indexC + 1] + "```")
 
     except:
        await ctx.send("```Sorry. Try using more words to enhance your experience...```")
 
 @client.command(pass_context=True, aliases=["!users"])
 async def member_count(ctx):
-    id = client.get_guild(716557689144082443)
+    id = client.get_guild(read_GuildId())
     await ctx.send(f"""```{id.member_count} Members ```""")
 
 @client.command(pass_context=True, aliases=list(keywords_basic.keys()))
@@ -331,7 +334,7 @@ async def basic(ctx):
     question = list(keywords_basic.keys())
     for phrase in question:
         if phrase in data:
-            await ctx.send(keywords_basic[phrase])
+            await ctx.send("```" + str(keywords_basic[phrase]) + "```")
 
 @client.command(pass_context=True, aliases=keywords_wish)
 async def basic_wish(ctx):
@@ -348,7 +351,7 @@ async def today_date(ctx):
             now = datetime.datetime.now()
             now = now.astimezone(tz)
             curr_date = str(now)
-            await ctx.send("```" + get_today(curr_date[0:10]) + "```")
+            await ctx.send("```" + str(get_today(curr_date[0:10]))+ "```")
 
 @client.command(pass_context=True, aliases=keywords_clock)
 async def date_clock(ctx):
@@ -371,7 +374,7 @@ async def date_clock(ctx):
 
 @client.event
 async def on_message(message):
-    channels = read_ChannelList
+    channels = read_ChannelList()
     if message.author.bot:
         print(message.content)
     elif str(message.channel) in channels and str(message.author):
@@ -409,9 +412,10 @@ async def on_message(message):
             print(bot_code)
             print(f"""User: {message.author} talking {message.content}, in channel {message.channel}""")
     # else:
-    #     await message.channel.send("```Invalid User!!```")
+    #     await message.channel.send("Invalid User!!")
     #     print(f"""User: {message.author} tried to do command {message.content}, in channel {message.channel}""")
 
 
 
 client.run(token)
+# print(read_ChannelList())
