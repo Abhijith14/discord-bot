@@ -7,6 +7,7 @@ from discord.ext import commands
 from discord.utils import get
 import youtube_dl
 from gtts import gTTS
+import json
 import os
 
 data = "Sorry"
@@ -30,18 +31,41 @@ keywords_date = ["today", "date", "whatisthedate", "whatistoday", "whatisthemont
 
 keywords_clock = ["whatisthetime", "time", "what'sthetime"]
 
-tz = pytz.timezone('Asia/Kolkata')
-
 def read_token():
-    with open("token.txt","r") as f:
-        lines = f.readlines()
-        return lines[0].strip()
+    with open('app.json') as f:
+        appData = json.load(f)
+    return appData['env']['TOKEN']['value']
+
+def read_clientid():
+    with open('app.json') as f:
+        appData = json.load(f)
+    return appData['env']['CLIENT_ID']['value']
+
+def read_audioChannelid():
+    with open('app.json') as f:
+        appData = json.load(f)
+    return appData['env']['AUDIOCHANNEL_ID']['value']
+
+def read_ChannelList():
+    with open('app.json') as f:
+        appData = json.load(f)
+    return appData['env']['Channels_Valid']['value']
+
+def read_TimeZone():
+    with open('app.json') as f:
+        appData = json.load(f)
+    return appData['env']['TIMEZONE']['value']
+
+
+
+tz = pytz.timezone(read_TimeZone)
+
 
 token = read_token()
 
 client = discord.Client()
 
-client = commands.Bot(command_prefix="")#<@!819275351258955776>
+client = commands.Bot(command_prefix="")
 
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
@@ -174,7 +198,7 @@ async def play(ctx, url: str):
 
     try:
         global channel_audio
-        channel = client.get_channel(819469487422046229)
+        channel = client.get_channel(read_audioChannelid())
         channel_audio = channel
         voice = get(client.voice_clients, guild=ctx.guild)
 
@@ -347,14 +371,16 @@ async def date_clock(ctx):
 
 @client.event
 async def on_message(message):
-    channels = ["general"]
+    channels = read_ChannelList
     if message.author.bot:
         print(message.content)
     elif str(message.channel) in channels and str(message.author):
         bot_code = str(message.content)[:22]
         msg_limit = 23
-        if bot_code == "<@!717691435905843331>" or bot_code == "<@717691435905843331> ":
-            if bot_code == "<@717691435905843331> ":
+        bc1 = "<@!" + str(read_clientid()) + ">"
+        bc2 = "<@" + str(read_clientid()) + "> "
+        if bot_code == bc1 or bot_code == bc2:
+            if bot_code == bc2:
                 msg_limit = 22
             original = str(message.content)[msg_limit:]
             com = original[0:4].lower()
