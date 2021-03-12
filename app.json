@@ -5,18 +5,27 @@
     "env": {
         "TOKEN": {
             "description": "Your discord bot's token.",
+            "value": "NzE3NjkxNDM1OTA1ODQzMzMx.XteBPg.r89EmshP7bmtW8h84AbVZ2FXGZ4",
+            "required": true
+        },
+        "CLIENT_ID": {
+            "description":"Your discord bot's client id.",
+            "value": "",
             "required": true
         },
         "AUDIOCHANNEL_ID": {
             "description": "The id of audio channel bot can talk to.",
+            "value": "",
             "required": true
         },
         "GUILD_ID": {
             "description": "The id for the server you are hosting this bot for.",
+            "value": "",
             "required": true
         },
         "GITHUB_TOKEN": {
             "description": "A github personal access token with the repo scope.",
+            "value": "",
             "required": false
         }
     }
