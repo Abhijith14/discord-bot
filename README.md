@@ -70,7 +70,7 @@ To configure automatic updates:
 
 Local hosting of BUDDY AI is also possible. First, you will need [`Python 3.7`](https://www.python.org/downloads/release/python-376/).
 
-Follow the [**installation guide**](https://github.com/Abhijith14/discord-bot/wiki/Installationn) and disregard deploying the Heroku bot application.
+Follow the [**installation guide**](https://github.com/Abhijith14/discord-bot/wiki/Installation) and disregard deploying the Heroku bot application.
 
 Clone the repo:
 
