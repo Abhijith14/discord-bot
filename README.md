@@ -87,7 +87,7 @@ $ pip install -r requirements.txt
 
 Fill out the fields in  [`app.json`](https://github.com/Abhijith14/discord-bot/blob/master/app.json), modify the values.
 
-Finally, start Modmail.
+Finally, start BUDDYAI.
 
 ```console
 $ python BUDDYAIBOT.py
